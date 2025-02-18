@@ -3,7 +3,7 @@ import { getPricess } from "../utility"
 const HelpForm = () => {
   return (
     <div className="sm:ml-2 sm:mr-2 md:ml-8 pt-4 pb-4 overflow-hidden flex justify-center lg:justify-start lg:pl-0">
-      <form className="p-4 w-full md:w-[400] lg:w-[400] flex flex-col gap-4 border-r-4 border-s-black bg-white rounded-lg self-center ml-2 mr-2 lg:ml-0 lg:mr-0">
+      <form className="p-4 w-[400] flex flex-col gap-4 border-r-4 border-s-black bg-white rounded-lg self-center ml-2 mr-2 lg:ml-0 lg:mr-0">
         <p style={{ fontWeight: 700 }} className="text-xl text-black text-center mb-8">NEED HELP?</p>
 
         <select name="amount" defaultValue={"Amount Needed"} className="select select-bordered w-full bg-white text-black">
