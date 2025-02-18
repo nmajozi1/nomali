@@ -13,7 +13,7 @@ const QuickAndEasy = () => {
         <p className="text-black text-center mb-4"><b>Nomali Cash Loans Registered Credit Provider NCRCP16647</b></p>
         <button className="btn btn-accent w-full">CONTACT US</button>
       </div>
-      <div className="bg-white w-2/2 lg:w-1/2">
+      <div className="hidden lg:flex bg-white w-2/2 lg:w-1/2">
         <img className="h-full" alt="approved" src="/Approved.jpeg" />
       </div>
     </div>
