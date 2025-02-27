@@ -24,8 +24,8 @@ export const sendEmail = async (body: THelp) => {
     `;
 
     await transporter.sendMail({
-      // from: `"Email Service" <${process.env.EMAIL}>`,
-      from: '"Email Service" <ntokozo.majozi5@gmail.com>',
+      from: `"Email Service" <${process.env.EMAIL}>`,
+      // from: '"Email Service" <ntokozo.majozi5@gmail.com>',
       // to: process.env.TO_EMAIL,
       to: 'info@lookho.co.za',
       subject: "Loan application ✔",
