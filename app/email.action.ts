@@ -7,8 +7,8 @@ const transporter = nodemailer.createTransport({
   secure: false,
   auth: {
     user: process.env.EMAIL,
-    // pass: process.env.PASSWORD,
-    pass: "ktzx zvnp ypab yidr"
+    pass: process.env.PASSWORD,
+    // pass: "ktzx zvnp ypab yidr"
   },
 });
 
@@ -26,7 +26,6 @@ export const sendEmail = async (body: THelp) => {
     await transporter.sendMail({
       from: `"Email Service" <${process.env.EMAIL}>`,
       to: process.env.TO_EMAIL,
-      // to: 'info@lookho.co.za',
       subject: "Loan application ✔",
       text: "Loan application",
       html: htmlBody,
