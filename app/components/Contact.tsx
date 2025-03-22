@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 /* eslint-disable @next/next/no-img-element */
 const Contact = () => {
   return (
@@ -12,10 +14,10 @@ const Contact = () => {
 
       <div className="flex flex-col gap-4 w-full lg:w-1/5 mt-8 lg:mt-0">
         <p className="text-lg"><b>QUICK LINKS</b></p>
-        <p className="text-sm">Home</p>
-        <p className="text-sm">How It Works</p>
-        <p className="text-sm">Payday Loan Application</p>
-        <p className="text-sm">Contact Us</p>
+        <p className="text-sm"><Link href="/home">Home</Link></p>
+        <p className="text-sm"><Link href="/howitworks">How it works</Link></p>
+        <p className="text-sm"><Link href="/application">Payday application</Link></p>
+        <p className="text-sm"><Link href="/contact">Contact Us</Link></p>
       </div>
 
       <div className="flex justify-start mt-8 lg:mt-0 w-full lg:w-2/5">

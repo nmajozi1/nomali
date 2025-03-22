@@ -1,11 +1,25 @@
+'use client'
+import { redirect } from "next/navigation";
 import DocumentIcon from "./Icons/DocumentIcon"
 import WhatsAppLarge from "./Icons/WhatsAppLarge"
 
-const HowItWorks = () => {
+type TWorks = {
+  default?: boolean;
+};
+
+const HowItWorks = (props: TWorks) => {
+  const defo = props?.default;
+
+  const applyOnline = () => redirect('/application');
+
   return (
     <div className="flex flex-col bg-white text-black pb-16 w-screen">
-      <p className="text-center text-2xl mt-20 lg:mt-48 mb-4"><b>How it works</b></p>
-      <p className="text-center mb-4 lg:mb-16 text-[#7A7A7A]">Choose one of the options below to apply</p>
+      {defo && (
+        <>
+          <p className="text-center text-2xl mt-20 lg:mt-48 mb-4"><b>How it works</b></p>
+          <p className="text-center mb-4 lg:mb-16 text-[#7A7A7A]">Choose one of the options below to apply</p>
+        </>
+      )}
 
       <div className="lg:flex gap-16 lg:justify-center flex-wrap">
 
@@ -28,7 +42,7 @@ const HowItWorks = () => {
               <li>The Loan repayment will be deducted from your account on your next payday by debit order</li>
             </ul>
           </div>
-          <button className="btn btn-info mt-4 mb-16">Apply Online</button>
+          <button className="btn btn-info mt-4 mb-16" onClick={applyOnline}>Apply Online</button>
         </div>
 
         <div className="flex flex-col w-full lg:w-1/3 lg:border lg:border-gray-500 pl-4 pr-4 lg:shadow-2xl justify-between">
@@ -48,7 +62,7 @@ const HowItWorks = () => {
               <li>The Loan repayment will be deducted from your account on your next payday by debit order</li>
             </ul>
           </div>
-          <button className="btn btn-info mt-4 mb-16">Apply via Whatsapp</button>
+          <button className="btn btn-info mt-4 mb-16" onClick={applyOnline}>Apply via Whatsapp</button>
         </div>
 
       </div>

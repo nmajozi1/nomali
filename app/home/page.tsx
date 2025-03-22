@@ -16,7 +16,7 @@ const page = () => {
       <Nav />
       <Banner />
       <QuickAndEasy />
-      <HowItWorks />
+      <HowItWorks default />
       <FastAndEasy />
       <Details />
       <Regulator />

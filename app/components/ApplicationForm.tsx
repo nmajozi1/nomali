@@ -13,7 +13,7 @@ const ApplicationForm = () => {
   const [state, action, pending] = useActionState(useApplicationForm, undefined);
   return (
     <div className="w-full flex justify-center">
-      <form className="w-1/3 flex flex-col gap-4" action={action}>
+      <form className="w-full pl-2 pr-2 lg:pl-0 lg:pr-0 lg:w-1/3 flex flex-col gap-4" action={action}>
         <select name="amount" defaultValue={"Amount Needed"} className="select select-bordered w-full bg-white text-black">
           <option disabled>Amount Needed</option>
           {getPricess().map((price, index) => (<option key={index}>R{price}</option>))}

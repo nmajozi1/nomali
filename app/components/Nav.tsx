@@ -9,10 +9,10 @@ const Nav = () => {
       </div>
       <ul style={{alignItems: 'center', fontWeight: 'bold'}} className="hidden lg:flex gap-8 list-none text-black text-xl">
         <li className="cursor-pointer hover:text-[#395D1F]"><Link href="/home">Home</Link></li>
-        <li className="cursor-pointer hover:text-[#395D1F]">How it works</li>
+        <li className="cursor-pointer hover:text-[#395D1F]"><Link href="/howitworks">How it works</Link></li>
         <li className="cursor-pointer hover:text-[#395D1F]"><Link href="/application">Payday application</Link></li>
-        <li className="cursor-pointer hover:text-[#395D1F]">Rates and fees</li>
-        <li className="cursor-pointer hover:text-[#395D1F]">Contact us</li>
+        <li className="cursor-pointer hover:text-[#395D1F]"><Link href="/rates">Rates and fees</Link></li>
+        <li className="cursor-pointer hover:text-[#395D1F]"><Link href="/contact">Contact us</Link></li>
       </ul>
     </div>
   )
