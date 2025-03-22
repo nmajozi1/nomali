@@ -1,8 +1,8 @@
 'use server'
 
-import { sendEmail } from "./email.action";
-import { helpFormSchema } from "./lib/definitions"
-import { FormState } from "./types/help.type"
+import { sendHelpEmail } from "../email.action";
+import { helpFormSchema } from "../lib/definitions"
+import { FormState } from "../types/help.type"
 
 export const useHelpForm = async (state: FormState, formData: FormData) => {
   const amountValue = formData.get('amount');
@@ -23,7 +23,7 @@ export const useHelpForm = async (state: FormState, formData: FormData) => {
     terms: termState,
   });
 
-  if (helpData?.success) await sendEmail(helpData.data);
+  if (helpData?.success) await sendHelpEmail(helpData.data);
 
   return { success: false, message: 'failed to register new user', open: false, error: helpData?.error?.flatten().fieldErrors };
 } 

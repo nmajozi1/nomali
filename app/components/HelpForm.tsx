@@ -2,7 +2,7 @@
 
 import { useActionState } from "react";
 import { getPricess } from "../utility"
-import { useHelpForm } from "../help.action";
+import { useHelpForm } from "../actions/help.action";
 
 const HelpForm = () => {
   const [state, action, pending] = useActionState(useHelpForm, undefined);

@@ -1,3 +1,4 @@
+import nodemailer from 'nodemailer';
 import TConent from "./types/content.type";
 
 export const content: TConent [] = [
@@ -50,6 +51,16 @@ export const content: TConent [] = [
     totalRepayments: 6515.25
   },
 ];
+
+export const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASSWORD,
+  },
+});
 
 export const bankImgPath: string [] = ['fnb.png', 'nedbank.webp', 'capitec.jpeg', 'standardBank.png', 'absa.svg'];
 
