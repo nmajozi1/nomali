@@ -4,7 +4,7 @@ const EmailIcon = () => {
       fill="#000000" 
       viewBox="0 0 24 24" 
       xmlns="http://www.w3.org/2000/svg"
-      className="h-4 w-4"
+      className="h-4 w-4 md:h-6 md:w-4 lg:h-6 lg:w-6"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
