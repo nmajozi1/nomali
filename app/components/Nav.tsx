@@ -1,8 +1,15 @@
+'use client'
 import Link from "next/link"
 import BurgerMenu from "../icons/BurgerMenu"
 
 /* eslint-disable @next/next/no-img-element */
 const Nav = () => {
+  // const openDrawer = () => {
+  //   if (document) {
+  //     document?.getElementById("my-drawer").checked = false
+  //   }
+  // }
+
   return (
     <div className="flex bg-white justify-between lg:justify-start gap-32 h-40 md:pl-48 sm:pl-0 lg:pl-48">
       <div className="flex justify-between w-screen lg:w-28 md:w-28">
@@ -17,7 +24,15 @@ const Nav = () => {
             </div>
           </div>
           <div className="drawer-side">
-            <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+            {/* <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label> */}
+            <button
+              onClick={() => {
+                const drawer = document.getElementById("my-drawer") as HTMLInputElement;
+                if (drawer) drawer.checked = false;
+              }}
+              aria-label="close sidebar"
+              className="drawer-overlay"
+            ></button>
             <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
               <li className="cursor-pointer hover:text-[#395D1F]"><Link href="/home">Home</Link></li>
               <li className="cursor-pointer hover:text-[#395D1F]"><Link href="/howitworks">How it works</Link></li>
