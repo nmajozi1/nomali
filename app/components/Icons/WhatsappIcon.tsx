@@ -5,7 +5,7 @@ const WhatsappIcon = () => {
       viewBox="0 0 256 256" 
       id="Flat" 
       xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6"
+      className="h-4 w-4"
     >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
