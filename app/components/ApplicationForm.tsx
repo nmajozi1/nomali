@@ -1,6 +1,6 @@
 'use client'
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { useApplicationForm } from "../actions/applications.action";
 import { getNumYears, getPerOrTemp, getPricess, getProvince, getRentOwn, nameOfBank } from "../utility";
 
@@ -11,6 +11,15 @@ import { DatePicker } from "@mui/x-date-pickers";
 
 const ApplicationForm = () => {
   const [state, action, pending] = useActionState(useApplicationForm, undefined);
+  const [showAlert, setShowAlert] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (state?.success) {
+      setShowAlert(true);
+      setTimeout(() => {setShowAlert(false)}, 3000)
+    }
+  }, [state?.success]);
+  
   return (
     <div className="w-full flex justify-center">
       <form className="w-full pl-2 pr-2 lg:pl-0 lg:pr-0 lg:w-1/3 flex flex-col gap-4" action={action}>
@@ -175,6 +184,13 @@ const ApplicationForm = () => {
 
         <button disabled={pending} type="submit" className="btn btn-accent mt-8 mb-8">Submit</button>
       </form>
+      {showAlert && (
+        <div className="toast toast-center">
+        <div className="alert alert-success">
+          <span>{state?.message}</span>
+        </div>
+      </div>
+      )}
     </div>
   )
 }

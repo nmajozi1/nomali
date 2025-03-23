@@ -23,7 +23,7 @@ export const useHelpForm = async (state: FormState, formData: FormData) => {
     terms: termState,
   });
 
-  if (helpData?.success) await sendHelpEmail(helpData.data);
+  if (helpData?.success) return await sendHelpEmail(helpData.data);
 
   return { success: false, message: 'failed to register new user', open: false, error: helpData?.error?.flatten().fieldErrors };
 } 

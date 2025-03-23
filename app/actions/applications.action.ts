@@ -78,7 +78,7 @@ export const useApplicationForm = async (state: ApplicationFormState, formData: 
       department: formData.get('department'),
     };
 
-    await sendApplicationEmail(sendData);
+    return await sendApplicationEmail(sendData);
   };
 
   return { success: false, message: 'failed submit the application', open: false, error: aplicationData?.error?.flatten().fieldErrors };

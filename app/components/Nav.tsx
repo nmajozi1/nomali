@@ -24,14 +24,7 @@ const Nav = () => {
             </div>
           </div>
           <div className="drawer-side">
-            <button
-              className="drawer-overlay"
-              onClick={() => {
-                const drawer = document.getElementById("my-drawer") as HTMLInputElement;
-                if (drawer) drawer.checked = false;
-              }}
-              aria-label="close sidebar"
-            />
+            <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"/>
             <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
               <li className="cursor-pointer hover:text-[#395D1F]"><Link href="/home">Home</Link></li>
               <li className="cursor-pointer hover:text-[#395D1F]"><Link href="/howitworks">How it works</Link></li>

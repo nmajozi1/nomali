@@ -19,7 +19,7 @@ export const sendHelpEmail = async (body: THelp) => {
     const htmlBody = helpEmail(body);
     const subject = '"Loan application enquiry ✔"';
     sendMail(htmlBody, subject);
-    return;
+    return { success: true, message: 'Help email has been sent successfuly', error: null };
   } catch (error) {
     throw new Error(`Unable to send email: , ${error}`);
   }
@@ -30,7 +30,7 @@ export const sendApplicationEmail = async (body: TApplication) => {
     const htmlBody = applicationEmail(body);
     const subject = '"Loan application ✔"';
     sendMail(htmlBody, subject);
-    return;
+    return { success: true, message: 'Application has been submitted successfuly', error: null };
   } catch (error) {
     throw new Error(`Unable to send email: , ${error}`);
   }

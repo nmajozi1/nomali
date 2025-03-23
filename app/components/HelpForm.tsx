@@ -1,11 +1,19 @@
 'use client'
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { getPricess } from "../utility"
 import { useHelpForm } from "../actions/help.action";
 
 const HelpForm = () => {
   const [state, action, pending] = useActionState(useHelpForm, undefined);
+  const [showAlert, setShowAlert] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (state?.success) {
+      setShowAlert(true);
+      setTimeout(() => {setShowAlert(false)}, 3000)
+    }
+  }, [state?.success]);
 
   return (
     <div className="sm:ml-2 sm:mr-2 md:ml-8 pt-4 pb-4 overflow-hidden flex justify-center lg:justify-start lg:pl-0">
@@ -39,8 +47,18 @@ const HelpForm = () => {
           <input name="terms" type="checkbox" className="checkbox checkbox-primary" />
         </label>
 
-        <button disabled={pending} type="submit" className="btn btn-accent mt-8">Submit</button>
+        <button disabled={pending} type="submit" className="btn btn-accent mt-8">
+          {pending && (<span className="loading loading-spinner"></span>)}
+          Submit
+        </button>
       </form>
+      {showAlert && (
+        <div className="toast toast-center">
+        <div className="alert alert-success">
+          <span>{state?.message}</span>
+        </div>
+      </div>
+      )}
     </div>
   )
 }
