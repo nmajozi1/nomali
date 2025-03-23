@@ -12,9 +12,15 @@ const Nav = () => {
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
             <div className="flex flex-col justify-center h-full">
-              <label htmlFor="my-drawer" className="btn btn-square btn-ghost drawer-button mr-2">
+              <button 
+                className="btn btn-square btn-ghost lg:hidden drawer-button mr-2"
+                onClick={() => {
+                  const drawer = document.getElementById("my-drawer") as HTMLInputElement;
+                  if (drawer) drawer.checked = true;
+                }}
+                >
                 <BurgerMenu />
-              </label>
+              </button>
             </div>
           </div>
           <div className="drawer-side">
