@@ -13,7 +13,7 @@ const Nav = () => {
           <div className="drawer-content">
             <div className="flex flex-col justify-center h-full">
               <button 
-                className="btn btn-square btn-ghost lg:hidden drawer-button mr-2"
+                className="btn btn-square btn-outline lg:hidden drawer-button mr-2"
                 onClick={() => {
                   const drawer = document.getElementById("my-drawer") as HTMLInputElement;
                   if (drawer) drawer.checked = true;
