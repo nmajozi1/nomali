@@ -10,7 +10,7 @@ const page = () => {
     <div className='flex flex-col w-full overflow-hidden flex-wrap bg-white text-black'>
       <ContactNav />
       <Nav />
-      <NavBanner title='PAYDAY LOAN APPLICATION' />
+      <NavBanner title='LOAN APPLICATION' />
       <ApplicationForm />
       <Contact />
     </div>
