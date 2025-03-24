@@ -1,7 +1,6 @@
 'use client'
 import Link from "next/link"
-// import BurgerMenuIcon from "./Icons/BurgerMenuIcon"
-import EmailIcon from "./Icons/EmailIcon"
+import BurgerMenuIcon from "./Icons/BurgerMenuIcon"
 
 /* eslint-disable @next/next/no-img-element */
 const Nav = () => {
@@ -20,7 +19,7 @@ const Nav = () => {
                   if (drawer) drawer.checked = true;
                 }}
                 >
-                <EmailIcon />
+                <BurgerMenuIcon />
               </button>
             </div>
           </div>
