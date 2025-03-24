@@ -1,3 +1,6 @@
+'use client'
+import { redirect } from "next/navigation"
+
 /* eslint-disable @next/next/no-img-element */
 const QuickAndEasy = () => {
   return (
@@ -11,7 +14,7 @@ const QuickAndEasy = () => {
           <img className="h-30 w-36" alt="ncr" src="/NCR.jpg" />
         </div>
         <p className="text-black text-center mb-4"><b>Nomali Cash Loans Registered Credit Provider NCRCP16647</b></p>
-        <button className="btn btn-accent w-full">CONTACT US</button>
+        <button className="btn btn-accent w-full" onClick={() => redirect('contact')}>CONTACT US</button>
       </div>
       <div className="hidden lg:flex bg-white w-2/2 lg:w-1/2">
         <img className="h-full" alt="approved" src="/Approved.jpeg" />

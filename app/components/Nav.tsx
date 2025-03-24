@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link"
-import BurgerMenu from "../icons/BurgerMenu"
+import BurgerMenuIcon from "./Icons/BurgerMenuIcon"
 
 /* eslint-disable @next/next/no-img-element */
 const Nav = () => {
@@ -13,13 +13,13 @@ const Nav = () => {
           <div className="drawer-content">
             <div className="flex flex-col justify-center h-full">
               <button 
-                className="btn btn-square btn-outline lg:hidden drawer-button mr-2"
+                className="btn btn-square btn-ghost lg:hidden drawer-button mr-2"
                 onClick={() => {
                   const drawer = document.getElementById("my-drawer") as HTMLInputElement;
                   if (drawer) drawer.checked = true;
                 }}
                 >
-                <BurgerMenu />
+                <BurgerMenuIcon />
               </button>
             </div>
           </div>
