@@ -3,7 +3,7 @@ import { bankImgPath } from "../utils"
 
 const BankStrip = () => {
   return (
-    <div className="flex justify-between">
+    <div className="flex flex-wrap justify-between">
         {bankImgPath.map((path, index) => (
           <div key={index} className="h-32 w-32 flex flex-col justify-center">
             <img className="bg-contain" alt="bank" src={`/${path}`} />
